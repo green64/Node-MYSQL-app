@@ -46,7 +46,7 @@ function orderId() {
       {
         name: "item",
         type: "input",
-        message: "What is the ID of the item you would like to purchase?",
+        message: "\nWhat is the ID of the item you would like to purchase?",
         validate: function (userInput) {
           //regEx to validate whether number is entered
           if (/^[1-9]?[0-9]{1}$|^100$/.test(userInput)) {
@@ -66,9 +66,9 @@ function orderId() {
           connection.query(`SELECT * FROM products WHERE item_id in (${res.item})`, function (err, result) {
             if (err) { console.error(err); }
             var ourResult = result
-            var stock_quantity =  ourResult[0].stock_quantity;
+            var stock_quantity = ourResult[0].stock_quantity;
             stock_quantity = Number(stock_quantity)
-            res.item       = Number(res.item)
+            res.item = Number(res.item)
             var purchase = (stock_quantity - requestedQuantity);
             if (requestedQuantity <= stock_quantity) {
               console.log("\nGreat! We can fill your order and ship it to you.");
