@@ -31,5 +31,5 @@ Queries used MYSQL syntax: ```connection.query("SELECT * FROM products", functio
 
 Because this is a command-line app, there's not an HTML page where you can watch it in action. In the video below, I walk through a quick demo to show the app is querying and updating the MYSQL database. 
 
-:video_camera: [Liri app walkthrough](hhttps://youtu.be/YXXJ1gQlZxY)
+:video_camera: [Bamazon app walkthrough](https://youtu.be/YXXJ1gQlZxY)
 
